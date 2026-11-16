@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Asset Management · Security Compliance</title>
+  <link rel="stylesheet" href="src/styles.css">
+  <script type="module" src="src/main.js"></script>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="topbar">
+    <strong class="brand">Security Compliance</strong>
+    <nav aria-label="Platform"><a href="#" aria-current="page">Asset Management</a></nav>
+  </header>
+  <main id="main" tabindex="-1">
+    <div class="banner" role="note">
+      <strong>Demo mode:</strong> no backend is connected. Assets are fictional seed data stored only in this browser (localStorage).
+      <button type="button" id="reset" class="link">Reset demo data</button>
+    </div>
+    <div id="alert" role="alert"></div>
+    <div class="head">
+      <h1>Asset Management</h1>
+      <div class="actions">
+        <button type="button" id="export" class="btn">Export CSV</button>
+        <button type="button" id="add" class="btn primary">Add asset</button>
+      </div>
+    </div>
+    <section aria-label="Overview" id="metrics" class="metrics"></section>
+    <form id="filters" class="filters" role="search" aria-label="Filter assets">
+      <label class="grow">Search<input type="search" name="search" placeholder="Name, identifier, owner, notes" autocomplete="off"></label>
+      <label>Type<select name="type"></select></label>
+      <label>Environment<select name="environment"></select></label>
+      <label>Criticality<select name="criticality"></select></label>
+      <label>Status<select name="status"></select></label>
+      <button type="reset" class="btn">Clear</button>
+    </form>
+    <p id="count" class="muted" aria-live="polite"></p>
+    <div class="tablewrap" id="tablewrap"></div>
+  </main>
+
+  <dialog id="form-dialog" aria-labelledby="form-title">
+    <form id="asset-form" novalidate method="dialog">
+      <h2 id="form-title"></h2>
+      <p id="form-error" class="error" role="alert"></p>
+      <div id="form-fields" class="fields"></div>
+      <div class="actions end">
+        <button type="button" class="btn" data-close>Cancel</button>
+        <button type="submit" class="btn primary">Save</button>
+      </div>
+    </form>
+  </dialog>
+
+  <dialog id="detail-dialog" aria-labelledby="detail-title">
+    <div id="detail"></div>
+  </dialog>
+</body>
+</html>
