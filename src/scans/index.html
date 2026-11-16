@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Scan Management · Security Compliance</title>
+  <link rel="stylesheet" href="scans.css">
+  <script type="module" src="main.js"></script>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="topbar">
+    <strong class="brand">Security Compliance</strong>
+    <nav aria-label="Platform"><a href="#" aria-current="page">Scan Management</a></nav>
+  </header>
+  <main id="main" tabindex="-1">
+    <div class="banner" role="note">
+      <strong>Demo mode:</strong> no backend or scanner is connected. Scans are fictional seed data stored only in this browser (localStorage); starting a scan only records its state, and results are entered manually.
+      <button type="button" id="reset" class="link">Reset demo data</button>
+    </div>
+    <div id="alert" role="alert"></div>
+    <div class="head">
+      <h1>Scan Management</h1>
+      <div class="actions">
+        <button type="button" id="export" class="btn">Export CSV</button>
+        <button type="button" id="add" class="btn primary">New scan</button>
+      </div>
+    </div>
+    <section aria-label="Overview" id="metrics" class="metrics"></section>
+    <form id="filters" class="filters" role="search" aria-label="Filter scans">
+      <label class="grow">Search<input type="search" name="search" placeholder="Name, target, owner, notes" autocomplete="off"></label>
+      <label>Type<select name="type"></select></label>
+      <label>Schedule<select name="schedule"></select></label>
+      <label>Status<select name="status"></select></label>
+      <button type="reset" class="btn">Clear</button>
+    </form>
+    <p id="count" class="muted" aria-live="polite"></p>
+    <div class="tablewrap" id="tablewrap"></div>
+  </main>
+
+  <dialog id="form-dialog" aria-labelledby="form-title">
+    <form id="scan-form" novalidate method="dialog">
+      <h2 id="form-title"></h2>
+      <p id="form-error" class="error" role="alert"></p>
+      <div id="form-fields" class="fields"></div>
+      <div class="actions end">
+        <button type="button" class="btn" data-close>Cancel</button>
+        <button type="submit" class="btn primary">Save</button>
+      </div>
+    </form>
+  </dialog>
+
+  <dialog id="results-dialog" aria-labelledby="results-title">
+    <form id="results-form" novalidate method="dialog">
+      <h2 id="results-title"></h2>
+      <p id="results-error" class="error" role="alert"></p>
+      <div id="results-fields" class="fields"></div>
+      <div class="actions end">
+        <button type="button" class="btn" data-close>Cancel</button>
+        <button type="submit" class="btn primary">Record results</button>
+      </div>
+    </form>
+  </dialog>
+
+  <dialog id="detail-dialog" aria-labelledby="detail-title">
+    <div id="detail"></div>
+  </dialog>
+</body>
+</html>
