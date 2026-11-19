@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Risk prioritization</title>
+  <link rel="stylesheet" href="/src/risk-prioritization/risk-prioritization.css">
+</head>
+<body>
+  <main>
+    <h1>Risk prioritization</h1>
+    <span id="count" role="status"></span>
+    <table id="risk-table">
+      <thead>
+        <tr><th>Rank</th><th>ID</th><th>Risk</th><th>Severity</th><th>Likelihood</th><th>Score</th><th>Priority</th></tr>
+      </thead>
+      <tbody id="risk-rows"></tbody>
+    </table>
+    <p id="empty-state" class="empty" hidden>No risks to prioritize.</p>
+  </main>
+  <script type="module" src="/src/risk-prioritization/main.js"></script>
+</body>
+</html>
