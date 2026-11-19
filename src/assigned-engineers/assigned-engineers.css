@@ -1,0 +1,5 @@
+.assigned-engineers ul { display: flex; gap: 1rem; list-style: none; margin: 0; padding: 0; flex-wrap: wrap; }
+.assigned-engineers li { display: flex; align-items: center; gap: .5rem; padding: .6rem .75rem; background: #fff; border: 1px solid #d0d7de; }
+.assigned-engineers .avatar { display: inline-flex; align-items: center; justify-content: center; width: 2rem; height: 2rem; border-radius: 50%; background: #ddf4ff; color: #0550ae; font-size: .8rem; font-weight: 600; }
+.engineer-role { color: #57606a; font-size: .85rem; }
+.assigned-engineers-total, .assigned-engineers-empty { color: #57606a; }
