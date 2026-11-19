@@ -1,0 +1,14 @@
+body { font-family: system-ui, sans-serif; margin: 0; color: #1b1f24; background: #f6f8fa; }
+main { max-width: 960px; margin: 2rem auto; padding: 0 1rem; }
+.timeline { list-style: none; margin: 0; padding: 0; border-left: 3px solid #d0d7de; }
+.entry { background: #fff; margin: 0 0 1rem 1rem; padding: .75rem 1rem; border: 1px solid #d0d7de; }
+.entry-head { display: flex; gap: .75rem; align-items: center; flex-wrap: wrap; }
+.entry-id { color: #57606a; font-family: ui-monospace, monospace; }
+.entry-meta { margin: .35rem 0; color: #57606a; font-size: .875rem; }
+.entry-summary { margin: 0; }
+.empty { padding: 2rem; text-align: center; background: #fff; color: #57606a; border: 1px dashed #d0d7de; }
+.badge { display: inline-block; padding: .1rem .55rem; border-radius: 999px; font-size: .8rem; font-weight: 600; }
+.badge-status-open { background: #ffebe9; color: #82071e; }
+.badge-status-in_progress { background: #ddf4ff; color: #0550ae; }
+.badge-status-escalated { background: #fbefff; color: #6639ba; }
+.badge-status-closed { background: #dafbe1; color: #116329; }
