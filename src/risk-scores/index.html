@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Risk scores</title>
+  <link rel="stylesheet" href="/src/risk-scores/risk-scores.css">
+</head>
+<body>
+  <main>
+    <h1>Risk scores</h1>
+    <span id="count" role="status"></span>
+    <table id="risk-table">
+      <thead>
+        <tr><th>ID</th><th>Name</th><th>Score</th><th>Level</th></tr>
+      </thead>
+      <tbody id="risk-rows"></tbody>
+    </table>
+    <p id="empty-state" class="empty" hidden>No risk scores available.</p>
+  </main>
+  <script type="module" src="/src/risk-scores/main.js"></script>
+</body>
+</html>
