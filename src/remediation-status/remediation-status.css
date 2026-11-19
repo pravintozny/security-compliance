@@ -1,0 +1,8 @@
+.remediation-status ul { display: flex; gap: 1rem; list-style: none; margin: 0; padding: 0; flex-wrap: wrap; }
+.remediation-status li { display: flex; align-items: center; gap: .5rem; padding: .6rem .75rem; background: #fff; border: 1px solid #d0d7de; }
+.remediation-total { color: #57606a; }
+.badge { display: inline-block; padding: .1rem .55rem; border-radius: 999px; font-size: .8rem; font-weight: 600; }
+.badge-remediation-open { background: #ffebe9; color: #82071e; }
+.badge-remediation-in_progress { background: #ddf4ff; color: #0550ae; }
+.badge-remediation-resolved { background: #dafbe1; color: #116329; }
+.badge-remediation-overdue { background: #82071e; color: #fff; }
