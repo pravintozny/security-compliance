@@ -1,0 +1,17 @@
+<!doctype html>
+<meta charset="utf-8">
+<title>customer-report demo</title>
+<customer-report id="r"></customer-report>
+<script type="module">
+  import './customer-report.js';
+  document.getElementById('r').data = {
+    customer: 'Acme Corp',
+    generatedAt: '2026-11-20',
+    controls: [
+      { id: 'AC-1', name: 'Access control policy', status: 'pass' },
+      { id: 'AU-2', name: 'Audit logging', status: 'warning', notes: 'Retention below 1 year' },
+      { id: 'SC-8', name: 'Transmission encryption', status: 'fail', notes: 'TLS 1.0 enabled' },
+      { id: 'PE-3', name: 'Physical access', status: 'n/a' },
+    ],
+  };
+</script>
